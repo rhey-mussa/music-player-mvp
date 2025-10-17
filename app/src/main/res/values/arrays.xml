@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="attribution_tags">
+        <item>audio_attribution</item> <!-- Tag genérica para áudio -->
+    </string-array>
+</resources>

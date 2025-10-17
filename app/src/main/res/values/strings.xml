@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MeuLeitorRhey</string>
+    <string name="john_lennon">John Lennon</string>
+    <string name="queen">Queen</string>
+    <string name="bob_dylan">Bob Dylan</string>
+    <string name="eagles">Eagles</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "562719220347",
+    "project_id": "musicplayermvp",
+    "storage_bucket": "musicplayermvp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562719220347:android:cec7216e151a79c56c78de",
+        "android_client_info": {
+          "package_name": "com.mussaldynerhey.meuleitorrhey"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCSbhxPB-65liKKvLi_Iw8SJf3bfVn8L0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1a1a1a"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:id="@+id/original_header_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/media_player_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="> Media Player"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/all_songs_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Ver todas as músicas"
+                android:src="@drawable/ic_list"
+                app:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/search_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Buscar músicas"
+                android:src="@drawable/ic_search"
+                app:tint="#FFFFFF" />
+
+            <!-- O botão de menu de 3 pontos será adicionado aqui automaticamente pelo Java -->
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- 2. RESTO DO LAYOUT AJUSTADO -->
+    <!-- Todo o conteúdo agora começa ABAIXO da nova Toolbar -->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="138dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:srcCompat="@drawable/ic_music"
+        tools:src="@drawable/ic_music" />
+
+    <!-- O restante do arquivo permanece exatamente igual -->
+
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Imagine"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        tools:text="Imagine" />
+
+    <TextView
+        android:id="@+id/artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="John Lennon"
+        android:textColor="#B3B3B3"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_title"
+        tools:text="John Lennon" />
+
+    <TextView
+        android:id="@+id/current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/artist_name"
+        tools:text="0:00" />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:progress="0"
+        android:thumb="@drawable/ic_circle"
+        app:layout_constraintTop_toTopOf="@id/current_time"
+        app:layout_constraintBottom_toBottomOf="@id/current_time"
+        app:layout_constraintStart_toEndOf="@id/current_time"
+        app:layout_constraintEnd_toStartOf="@id/total_time"
+        tools:progress="0" />
+
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/current_time"
+        app:layout_constraintBottom_toBottomOf="@id/current_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="0:00" />
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar">
+
+        <ImageView
+            android:id="@+id/shuffleButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_shuffle" />
+
+        <ImageButton
+            android:id="@+id/prev_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="32dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Previous song"
+            android:src="@drawable/ic_skip_previous"
+            tools:src="@drawable/ic_skip_previous" />
+
+        <ImageButton
+            android:id="@+id/play_pause_button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Play or pause song"
+            android:src="@drawable/ic_play"
+            tools:src="@drawable/ic_play" />
+
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Next song"
+            android:src="@drawable/ic_skip_next"
+            tools:src="@drawable/ic_skip_next" />
+
+        <ImageView
+            android:id="@+id/repeatButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_repeat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/songs_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main">
+
+        <TextView
+            android:id="@+id/songs_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Músicas"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/song_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/songs_header_layout"
+        tools:listitem="@layout/item_song" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
